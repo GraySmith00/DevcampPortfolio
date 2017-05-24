@@ -12,6 +12,17 @@ class Portfolio < ApplicationRecord
     where(subtitle: "Ruby on Rails")
   end
   
+  after_initialize :set_defaults
   
+  def set_defaults
+    #self.main_image ||= "http://placehold.it/600x400"
+    if self.main_image == nil
+      self.main_image = "http://placehold.it/600x400"
+    end
+    #self.thumb_image ||= "http://placehold.it/350x200"
+    if self.thumb_image == nil
+      self.thumb_image = "http://placehold.it/350x200"
+    end
+  end
   
 end
