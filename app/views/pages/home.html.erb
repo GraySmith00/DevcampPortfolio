@@ -1,5 +1,11 @@
-<h1>Home Page</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+ <% if current_user && current_user.name != nil %>
+   <h1>Hi and welcome, <%= current_user.first_name %>!</h1>
+ <% end %>
+
+
+<!--<h1>Home Page</h1>-->
+<!--<p>Find me in app/views/pages/home.html.erb</p>-->
 
 
 <h3>Blog Posts</h3>
