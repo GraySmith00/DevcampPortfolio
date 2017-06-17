@@ -4,13 +4,6 @@
 <h3><%= link_to 'Angular', portfolios_angular_path %></h3>
 <h3><%= link_to 'Ruby on Rails', portfolios_ruby_on_rails_path %></h3>
 
-<% @portfolio_items.each do |portfolio_item| %>
-  <h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %></h2>
-  <p><%= portfolio_item.subtitle %></p>
-  <p><%= portfolio_item.body %></p>
-  <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
-  
-  <hr/>
-<% end %>
+<%= render partial: 'portfolio_item', collection: @portfolio_items %>
 
 <%= link_to "New Portfolio Item", new_portfolio_path %>
