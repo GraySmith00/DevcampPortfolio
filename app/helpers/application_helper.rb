@@ -22,6 +22,9 @@ module ApplicationHelper
     end
   end
   
+  def copyright_generator
+    GSViewTool::Renderer.copyright 'Gray Smith', 'All rights reserved'
+  end
   
   
 end
