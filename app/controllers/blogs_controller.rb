@@ -4,6 +4,10 @@ class BlogsController < ApplicationController
   #points to blog layout view instead of application layout
   layout "blog"
   
+  access all: [:show, :index], 
+         user: {except: [:destroy, :new, :create, :update, :edit]}, 
+         site_admin: :all
+         
   # GET /blogs
   # GET /blogs.json
   def index
