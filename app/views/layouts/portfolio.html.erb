@@ -18,7 +18,7 @@
     <%= render 'shared/portfolio_nav' %>
   
     <!--Jumbotron-->
-    <%= render 'shared/portfolio_jumbotron' %>
+    <%= render 'shared/portfolio_jumbotron' unless logged_in?(:site_admin) %>
     
     <%= yield %>
     
