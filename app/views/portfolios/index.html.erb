@@ -1,16 +1,15 @@
 <div class="album text-muted">
   <div class="container">
-    <div class="row">
-
-      <!--<h3><%= link_to 'Angular', portfolios_angular_path %></h3>-->
-      <!--<h3><%= link_to 'Ruby on Rails', portfolios_ruby_on_rails_path %></h3>-->
-      
+    
+    <div class="row sortable">
       <%= render partial: 'portfolio_item', collection: @portfolio_items %>
-      
-      
-      
     </div>
     
-    <%= link_to 'New Portfolio Item', new_portfolio_path, class: 'btn btn-primary' if logged_in?(:site_admin) %>
+    <h3><%= link_to 'Angular', portfolios_angular_path %></h3> 
+    <h3><%= link_to 'Ruby on Rails', portfolios_ruby_on_rails_path %></h3>
+    
+    <%= link_to 'New Portfolio Item', new_portfolio_path, 
+            class: 'btn btn-primary' if logged_in?(:site_admin) %>
+    
   </div>
 </div>
