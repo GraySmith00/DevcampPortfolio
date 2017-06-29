@@ -30,4 +30,8 @@ class Portfolio < ApplicationRecord
     end
   end
   
+  def self.by_position
+    order("position ASC")
+  end
+  
 end
