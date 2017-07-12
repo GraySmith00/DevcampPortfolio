@@ -2,7 +2,8 @@ class Portfolio < ApplicationRecord
   has_many :technologies, dependent: :destroy
   # needed for accepting technology values in the portfolio form
   accepts_nested_attributes_for :technologies, 
-          reject_if: lambda { |attrs| attrs['name'].blank? }
+                                allow_destroy: true,
+                                reject_if: lambda { |attrs| attrs['name'].blank? }
   
   validates_presence_of :title, :body
   
