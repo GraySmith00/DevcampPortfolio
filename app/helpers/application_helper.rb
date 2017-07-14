@@ -26,6 +26,7 @@ module ApplicationHelper
     GSViewTool::Renderer.copyright 'Gray Smith', 'All rights reserved'
   end
   
+  #navigation item helper, for changing nav items in different layouts all at once
   def nav_items
     [
       {
@@ -48,6 +49,10 @@ module ApplicationHelper
         url: portfolios_path,
         title: 'Portfolio'
       },
+      {
+        url: tech_news_path,
+        title: 'Dev News'
+      }
       ]
   end
   
