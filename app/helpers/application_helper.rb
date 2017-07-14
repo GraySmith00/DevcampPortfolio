@@ -66,8 +66,6 @@ module ApplicationHelper
     "active" if current_page? path
   end
   
-  
-  
   #Gritter alert helper methods for errors, alerts, and notices
   def alerts
     alert = ( flash[:alert] || flash[:error] || flash[:notice] )
