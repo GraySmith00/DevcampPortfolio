@@ -4,10 +4,25 @@
   
   <p><%= @blog.body %></p>
   
+  
+  
+  <!--Start Comment Form-->
+  <%= render 'comments/comment_form' %>
+  <!--End Comment Form-->
+  
+  <br>
+  
+  <!--Start Comments-->
+  <div id='comments' data-blog-id="<%= @blog.id %>">
+    <%= render @blog.comments %>
+  </div>
+  <!--End Comments-->
+  
+  <br><br>
+  
   <% if logged_in?(:site_admin) %>
     <%= link_to 'Edit', edit_blog_path(@blog) %> |
   <% end %>
-  
   <%= link_to 'Back', blogs_path %>
 </div><!-- /.blog-main -->
 
