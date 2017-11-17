@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Montserrat', sans-serif;
   color: #555;
 }
 
@@ -27,7 +27,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   color: #333;
 }
@@ -194,4 +194,17 @@ h6, .h6 {
 
 .comment-name {
   font-weight: bold;
+}
+
+.blog-index-crumbs a {
+  font-size: 1.25em;
+  margin: 0px 10px 0px 10px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
+}
+
+.blog-source-helper {
+  margin-top: 20px;
 }
